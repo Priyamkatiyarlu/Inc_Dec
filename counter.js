@@ -9,15 +9,16 @@ const decrement = () => {
     value-=1;
     val.innerText = value;
 };
-const counter = ()=>{
-    let value= parseInt(val.innerText);
-    if(value==0){
-        clearInterval(id);
-        console.log("clearinterval");
-        return;
+const ctr = () => {
+    const counter = ()=>{
+        let value= parseInt(val.innerText);
+        if(value==0){
+            clearInterval(id);
+            console.log("clearinterval");
+            return;
+        }
+        value-=1;
+        val.innerText = value;
     }
-    value-=1;
-    val.innerText = value;
-}
-
-const id = setInterval(counter,1000);
+    const id = setInterval(counter,1000);
+};
